@@ -31,6 +31,12 @@ public class UserDaoImpl  implements UserDao{
 	public User getUserByEmail(String email) {
 		String hql = "FROM User as u WHERE u.email = ?";
 		return entityManager.createQuery(hql,User.class).setParameter(1, email).getSingleResult();
+	}
+
+
+	@Override
+	public void save(User user) {
+		entityManager.persist(user);		
 	}	
 
 }
