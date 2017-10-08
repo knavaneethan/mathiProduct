@@ -15,9 +15,6 @@ public class UserRoleDaoImpl implements UserRoleDao{
 	@PersistenceContext	
 	private EntityManager entityManager;
 
-//	@Autowired
-//	private HibernateTemplate hibernateTemplate;
-
 	@Override
 	public Set<String> getUserRolesByEmail(String email) {		
 		String hql = "SELECT ur.roleName FROM UserRole as ur WHERE ur.email = ?";
@@ -25,10 +22,4 @@ public class UserRoleDaoImpl implements UserRoleDao{
 		 Set<String> set = new HashSet<String>(result);
 		return set;	
 	}
-
-//	@Override
-//	public void insert(UserRole r) {
-//		hibernateTemplate.save(r);
-//	}
-
 }
