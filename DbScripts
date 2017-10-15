@@ -12,12 +12,12 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Dumping database structure for navproduct
-DROP DATABASE IF EXISTS `navproduct`;
-CREATE DATABASE IF NOT EXISTS `navproduct` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `navproduct`;
+-- Dumping database structure for mathiproduct
+DROP DATABASE IF EXISTS `mathiproduct`;
+CREATE DATABASE IF NOT EXISTS `mathiproduct` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `mathiproduct`;
 
--- Dumping structure for table navproduct.rolespermission
+-- Dumping structure for table mathiproduct.rolespermission
 DROP TABLE IF EXISTS `rolespermission`;
 CREATE TABLE IF NOT EXISTS `rolespermission` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -26,14 +26,14 @@ CREATE TABLE IF NOT EXISTS `rolespermission` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table navproduct.rolespermission: ~2 rows (approximately)
+-- Dumping data for table mathiproduct.rolespermission: ~2 rows (approximately)
 /*!40000 ALTER TABLE `rolespermission` DISABLE KEYS */;
 INSERT INTO `rolespermission` (`id`, `permission`, `roleName`) VALUES
 	(1, 'admin:access', 'admin'),
 	(2, 'user:access', 'admin');
 /*!40000 ALTER TABLE `rolespermission` ENABLE KEYS */;
 
--- Dumping structure for table navproduct.shops
+-- Dumping structure for table mathiproduct.shops
 DROP TABLE IF EXISTS `shops`;
 CREATE TABLE IF NOT EXISTS `shops` (
   `id` int(6) NOT NULL AUTO_INCREMENT,
@@ -42,13 +42,13 @@ CREATE TABLE IF NOT EXISTS `shops` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Dumping data for table navproduct.shops: ~1 rows (approximately)
+-- Dumping data for table mathiproduct.shops: ~1 rows (approximately)
 /*!40000 ALTER TABLE `shops` DISABLE KEYS */;
 INSERT INTO `shops` (`id`, `name`, `employees_number`) VALUES
 	(7, 'testshop', 7);
 /*!40000 ALTER TABLE `shops` ENABLE KEYS */;
 
--- Dumping structure for table navproduct.user
+-- Dumping structure for table mathiproduct.user
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -59,13 +59,13 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table navproduct.user: ~1 rows (approximately)
+-- Dumping data for table mathiproduct.user: ~1 rows (approximately)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`id`, `username`, `email`, `password`, `salt`) VALUES
 	(1, 'navaneethan', 'knavaneethan@gmail.com', '6fWp2tfWNdCCRdJwj6MpSh7PdUCOYx2dxNxX13/lg0I=', 'DvISmCeCxuaHUZWMv7gCvw==');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
--- Dumping structure for table navproduct.userdetails
+-- Dumping structure for table mathiproduct.userdetails
 DROP TABLE IF EXISTS `userdetails`;
 CREATE TABLE IF NOT EXISTS `userdetails` (
   `user_id` int(11) NOT NULL,
@@ -83,11 +83,11 @@ CREATE TABLE IF NOT EXISTS `userdetails` (
   FULLTEXT KEY `interests` (`interests`,`skills`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table navproduct.userdetails: ~0 rows (approximately)
+-- Dumping data for table mathiproduct.userdetails: ~0 rows (approximately)
 /*!40000 ALTER TABLE `userdetails` DISABLE KEYS */;
 /*!40000 ALTER TABLE `userdetails` ENABLE KEYS */;
 
--- Dumping structure for table navproduct.userrole
+-- Dumping structure for table mathiproduct.userrole
 DROP TABLE IF EXISTS `userrole`;
 CREATE TABLE IF NOT EXISTS `userrole` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `userrole` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table navproduct.userrole: ~2 rows (approximately)
+-- Dumping data for table mathiproduct.userrole: ~2 rows (approximately)
 /*!40000 ALTER TABLE `userrole` DISABLE KEYS */;
 INSERT INTO `userrole` (`id`, `roleName`, `email`) VALUES
 	(1, 'admin', 'knavaneethan@gmail.com'),
